@@ -1,0 +1,77 @@
+{
+  "units": [
+    {
+      "name": "Painel 1",
+      "address": "Rua 5",
+      "brand": "Canadian",
+      "model": "155W",
+      "active": true,
+      "id": 1
+    },
+    {
+      "name": "Painel 2",
+      "address": "Rua 15",
+      "brand": "Risen",
+      "model": "100W",
+      "active": true,
+      "id": 2
+    },
+    {
+      "name": "Painel 3",
+      "address": "Rio de Janeiro",
+      "brand": "Hanwha",
+      "model": "200W",
+      "active": true,
+      "id": 3
+    },
+    {
+      "name": "Painel 4",
+      "address": "São Paulo",
+      "brand": "Hanwha",
+      "model": "100W",
+      "active": true,
+      "id": 4
+    },
+    {
+      "name": "5",
+      "address": "5",
+      "brand": "5",
+      "model": "5",
+      "active": false,
+      "id": 5
+    },
+    {
+      "name": "6",
+      "address": "6",
+      "brand": "6",
+      "model": "6",
+      "active": false,
+      "id": 6
+    },
+    {
+      "name": "7",
+      "address": "7",
+      "brand": "7",
+      "model": "7",
+      "active": false,
+      "id": 7
+    },
+    {
+      "name": "8",
+      "address": "8",
+      "brand": "8",
+      "model": "8",
+      "active": false,
+      "id": 8
+    },
+    {
+      "name": "9",
+      "address": "9",
+      "brand": "9",
+      "model": "9",
+      "active": false,
+      "id": 9
+    }
+  ],
+  "geracoes": []
+}
