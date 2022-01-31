@@ -23,22 +23,23 @@ function Generation() {
   async function handleSubmit(e) {
     e.preventDefault();
     
-    var d = new Date(monthYear),
-      month = (d.getMonth() + 1),
-      year = d.getFullYear();
+    let d = new Date(monthYear),
+      month = '' + (d.getMonth() + 1),
+      year = '' + d.getFullYear();
 
-    console.log(month);
-    console.log(year);
-    console.log(unit)
+    if(month.length < 2) {
+      month = '0' + month;
+    }
 
+    let saveDate = month + year;
+    
     try {
       await fetch('http://localhost:3333/geracoes',
       {
         method: 'POST',
         body: JSON.stringify({
           units_id: unit,
-          month,
-          year,
+          date: saveDate,
           energy
         }),
         headers: { 'Content-Type' : 'application/json'}

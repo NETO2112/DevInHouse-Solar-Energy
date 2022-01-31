@@ -4,6 +4,7 @@ function Dashboard() {
 
   const [units, setUnits] = useState([]);
   const [activeUnits, setActiveUnits] = useState(0);
+  const [energyAverage, setEnergyAverage] = useState(0);
 
   useEffect(() => {
     async function handleGetUnit() {
@@ -20,12 +21,22 @@ function Dashboard() {
     async function handleGetEnergy() {
       await fetch('http://localhost:3333/geracoes')
       .then(response => response.json())
+      .then(data => {
+        let arrayEnergy = data.map(unit => parseInt(unit.energy))
+        let sum = 0;
+        for(let i=0;i<arrayEnergy.length;i++) {
+          sum = sum + arrayEnergy[i];
+        }
+        let noOfUnits = [...new Set(data.map(item => item.units_id))]
+        /* let newSum = parseInt(sum/arrayEnergy.length) li de novo e fiquei na dúvida se era assim (que parece fazer mais sentido) ou do jeito de baixo (que é o que fala no documento) */
+        let newSum = parseInt(sum/noOfUnits.length)
+        setEnergyAverage(newSum)
+        let dates = [...new Set(data.map(item => item.date))]
+        console.log(dates)
+      })
     }
     handleGetEnergy()
-    
   },[]);
-
-
 
   return (
     <div>
@@ -44,7 +55,7 @@ function Dashboard() {
         </div>
         <div>
           <p>Média de Energia</p>
-          <h2>a</h2>
+          <h2>{energyAverage} kw</h2>
         </div>
       </div>
     </div>

@@ -73,5 +73,78 @@
       "id": 9
     }
   ],
-  "geracoes": []
+  "geracoes": [
+    {
+      "units_id": "1",
+      "date": "012022",
+      "energy": "88",
+      "id": 1
+    },
+    {
+      "units_id": "1",
+      "date": "122021",
+      "energy": "75",
+      "id": 2
+    },
+    {
+      "units_id": "1",
+      "date": "112021",
+      "energy": "86",
+      "id": 3
+    },
+    {
+      "units_id": "1",
+      "date": "102021",
+      "energy": "63",
+      "id": 4
+    },
+    {
+      "units_id": "1",
+      "date": "092021",
+      "energy": "41",
+      "id": 5
+    },
+    {
+      "units_id": "1",
+      "date": "082021",
+      "energy": "92",
+      "id": 6
+    },
+    {
+      "units_id": "1",
+      "date": "072021",
+      "energy": "110",
+      "id": 7
+    },
+    {
+      "units_id": "1",
+      "date": "062021",
+      "energy": "42",
+      "id": 8
+    },
+    {
+      "units_id": "1",
+      "date": "052021",
+      "energy": "125",
+      "id": 9
+    },
+    {
+      "units_id": "1",
+      "date": "042021",
+      "energy": "130",
+      "id": 10
+    },
+    {
+      "units_id": "1",
+      "date": "032021",
+      "energy": "102",
+      "id": 11
+    },
+    {
+      "units_id": "1",
+      "date": "022021",
+      "energy": "95",
+      "id": 12
+    }
+  ]
 }
