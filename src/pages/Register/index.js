@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import ButtonGlobal from "../../components/ButtonGlobal";
 import Checkbox from "../../components/Checkbox";
+import ContainerDefault from "../../components/ContainerContent";
 import Input from "../../components/Input";
+import TitleComp from "../../components/Title";
+import { SubContainerRegister, SubTitle } from "./styles";
 
 function Register() {
 
@@ -79,41 +83,46 @@ function Register() {
   },[])
 
   return(
-    <>
-      <form onSubmit={handleSubmit}>
-        <Input 
-          label="Apelido"
-          placeholder="Painel 1"
-          value={name}
-          onChange={(e) => {setName(e.target.value)}}
-        />
-        <Input 
-          label="Local"
-          placeholder="Painel 1"
-          value={address}
-          onChange={(e) => {setAddress(e.target.value)}}
-        />
-        <Input 
-          label="Marca"
-          placeholder="Painel 1"
-          value={brand}
-          onChange={(e) => {setBrand(e.target.value)}}
-        />
-        <Input 
-          label="Modelo"
-          placeholder="Painel 1"
-          value={model}
-          onChange={(e) => {setModel(e.target.value)}}
-        />
-        <Checkbox 
-          label="Ativo"
-          checked={active}
-          value={active}
-          onChange={(e) => {setActive(e.target.checked)}}
-        />
-        <button type="submit">Salvar</button>
-      </form>
-    </>
+    <ContainerDefault>
+      <TitleComp>Unidades</TitleComp>
+      <SubContainerRegister>
+        {location.pathname == '/unidades/cadastro' ? <SubTitle>Cadastro de Unidade Geradora</SubTitle> : <SubTitle>Editar Unidade Geradora</SubTitle>}
+        <form onSubmit={handleSubmit}>
+          <Input 
+            label="Apelido"
+            placeholder="Apelido da Unidade"
+            value={name}
+            width="50%"
+            onChange={(e) => {setName(e.target.value)}}
+            />
+          <Input 
+            label="Local"
+            placeholder="Local da Unidade"
+            value={address}
+            onChange={(e) => {setAddress(e.target.value)}}
+            />
+          <Input 
+            label="Marca"
+            placeholder="Marca do Aparelho"
+            value={brand}
+            onChange={(e) => {setBrand(e.target.value)}}
+            />
+          <Input 
+            label="Modelo"
+            placeholder="Modelo do Aparelho"
+            value={model}
+            onChange={(e) => {setModel(e.target.value)}}
+            />
+          <Checkbox 
+            label="Ativo"
+            checked={active}
+            value={active}
+            onChange={(e) => {setActive(e.target.checked)}}
+            />
+          <ButtonGlobal type="submit">Salvar</ButtonGlobal>
+        </form>
+      </SubContainerRegister>
+    </ContainerDefault>
   )
 }
 

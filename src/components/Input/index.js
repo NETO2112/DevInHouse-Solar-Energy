@@ -1,20 +1,14 @@
 import React from 'react';
 
-import { 
-   ContainerInput, 
-   DescriptionInput, 
-   InputText,
-   ErrorMessage
-   } from './styles';
+import { ContainerInput, DescriptionInput, InputText } from './styles';
 
-function Input({ label, errorMessage, flexBasis, ...otherProps }) {
+function Input({ label, flexBasis, ...otherProps }) {
   return (
     <ContainerInput flexBasis={flexBasis}>
      <DescriptionInput>{label}</DescriptionInput>
       <InputText
         {...otherProps}
       />
-      <ErrorMessage>{errorMessage}</ErrorMessage> 
     </ContainerInput>
   );
 }

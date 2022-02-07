@@ -21,7 +21,7 @@
       "address": "Rio de Janeiro",
       "brand": "Hanwha",
       "model": "200W",
-      "active": true,
+      "active": false,
       "id": 3
     },
     {
@@ -31,120 +31,98 @@
       "model": "100W",
       "active": true,
       "id": 4
-    },
-    {
-      "name": "5",
-      "address": "5",
-      "brand": "5",
-      "model": "5",
-      "active": false,
-      "id": 5
-    },
-    {
-      "name": "6",
-      "address": "6",
-      "brand": "6",
-      "model": "6",
-      "active": false,
-      "id": 6
-    },
-    {
-      "name": "7",
-      "address": "7",
-      "brand": "7",
-      "model": "7",
-      "active": false,
-      "id": 7
-    },
-    {
-      "name": "8",
-      "address": "8",
-      "brand": "8",
-      "model": "8",
-      "active": false,
-      "id": 8
-    },
-    {
-      "name": "9",
-      "address": "9",
-      "brand": "9",
-      "model": "9",
-      "active": false,
-      "id": 9
     }
   ],
   "geracoes": [
     {
       "units_id": "1",
-      "date": "012022",
+      "date": "202201",
       "energy": "88",
       "id": 1
     },
     {
       "units_id": "1",
-      "date": "122021",
+      "date": "202112",
       "energy": "75",
       "id": 2
     },
     {
       "units_id": "1",
-      "date": "112021",
+      "date": "202111",
       "energy": "86",
       "id": 3
     },
     {
       "units_id": "1",
-      "date": "102021",
+      "date": "202110",
       "energy": "63",
       "id": 4
     },
     {
       "units_id": "1",
-      "date": "092021",
+      "date": "202109",
       "energy": "41",
       "id": 5
     },
     {
       "units_id": "1",
-      "date": "082021",
+      "date": "202108",
       "energy": "92",
       "id": 6
     },
     {
       "units_id": "1",
-      "date": "072021",
+      "date": "202107",
       "energy": "110",
       "id": 7
     },
     {
       "units_id": "1",
-      "date": "062021",
+      "date": "202106",
       "energy": "42",
       "id": 8
     },
     {
       "units_id": "1",
-      "date": "052021",
+      "date": "202105",
       "energy": "125",
       "id": 9
     },
     {
       "units_id": "1",
-      "date": "042021",
+      "date": "202104",
       "energy": "130",
       "id": 10
     },
     {
       "units_id": "1",
-      "date": "032021",
+      "date": "202103",
       "energy": "102",
       "id": 11
     },
     {
       "units_id": "1",
-      "date": "022021",
+      "date": "202102",
       "energy": "95",
       "id": 12
+    },
+    {
+      "units_id": "1",
+      "date": "202202",
+      "energy": "120",
+      "id": 13
+    },
+    {
+      "units_id": "2",
+      "date": "202202",
+      "energy": "30",
+      "id": 14
+    },
+    {
+      "units_id": "2",
+      "date": "202201",
+      "energy": "130",
+      "id": 15
     }
   ]
 }

@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  LabelContainer,
-  InputCheckbox,
-  Description,
-  ErrorMessage
-} from './styles';
+import { LabelContainer, InputCheckbox, Description } from './styles';
 
 function Checkbox({ label, errorMessage, ...otherProps }) {
   return (
@@ -15,7 +10,6 @@ function Checkbox({ label, errorMessage, ...otherProps }) {
         {...otherProps}
       />
       <Description>{label}</Description>
-      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </LabelContainer>
   );
 }

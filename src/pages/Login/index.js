@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputLogin from "../../components/InputLogin";
 import Logo from "../../components/Logo";
-import { ContainerImage, ContainerLogin, LoginImage } from "./styles";
+import { ButtonLogin, ContainerImage, ContainerLogin, LoginImage } from "./styles";
 
 function Login() {
 
@@ -46,7 +46,7 @@ function Login() {
           value={email}
           placeholder="E-mail"
           errorMessage={errors.email}
-          marginBottom="10px"
+          marginBottom="20px"
           onChange={(e) => {
             setEmail(e.target.value)
           }}
@@ -60,7 +60,7 @@ function Login() {
             setPassword(e.target.value)
           }}
         />
-        <button type="submit">Entrar</button>
+        <ButtonLogin type="submit">Entrar</ButtonLogin>
       </ContainerLogin>
     </>
   )

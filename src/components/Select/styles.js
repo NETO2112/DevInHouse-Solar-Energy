@@ -5,27 +5,16 @@ export const ContainerSelect = styled.div`
   flex-direction: column;
 `;
 
-export const DescriptionSelect = styled.label`
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #212529;
-`;
-
 export const List = styled.select`
   background: #FFF;
-  width: 100%;
-  height: 24px;
+  width: 250px;
   outline: 0;
   border: 1px solid #ced4da;
-  padding-left: 5px;
-  border-radius: 2px;
-
-  option {
-    background: #ced4da;
-  }
-
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
   &:focus {
-    border-color: #EC6D08;
+    border-color: #4CBC9A;
   }
 `;

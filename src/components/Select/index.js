@@ -1,16 +1,13 @@
 import React from 'react';
 import {
   ContainerSelect,
-  DescriptionSelect,
   List
 } from './styles';
 
-function Select({ label, options, description, ...otherProps }) {
+function Select({ options, description, ...otherProps }) {
   
   return (
     <ContainerSelect>
-     
-      <DescriptionSelect>{label}</DescriptionSelect>
       <List {...otherProps} selected="">
         <option disabled value="">{description}</option>
         {options.map(option => <option

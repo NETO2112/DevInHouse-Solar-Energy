@@ -20,3 +20,17 @@ export const ContainerLogin = styled.form`
   justify-content: center;
   align-items: center;
 `;
+
+export const ButtonLogin = styled.button`
+  width: 332px;
+  height: 64px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #4CBC9A;
+  color: #fff;
+  margin-top: 20px;
+  &:hover{
+    background: #2C9C7A;
+  }
+`;

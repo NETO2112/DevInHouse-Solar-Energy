@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
+import ButtonGlobal from "../../components/ButtonGlobal";
+import ContainerDefault from "../../components/ContainerContent";
 import Input from "../../components/Input";
 import InputDate from "../../components/InputDate";
 import Select from "../../components/Select";
+import TitleComp from "../../components/Title";
+import { FormGeneration, TextBox } from "./styles";
 
 function Generation() {
 
@@ -31,7 +35,7 @@ function Generation() {
       month = '0' + month;
     }
 
-    let saveDate = month + year;
+    let saveDate = year + month;
     
     try {
       await fetch('http://localhost:3333/geracoes',
@@ -52,30 +56,32 @@ function Generation() {
   
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <ContainerDefault>
+      <TitleComp>Lançamento de Geração Mensal</TitleComp>
+      <FormGeneration onSubmit={handleSubmit}>
+        <TextBox>Unidade geradora:</TextBox>
         <Select
-          label="Unidade geradora:"
           value={unit}
           onChange={(e) => setUnit(e.target.value)}
           options={units}
         />
+        <TextBox>Mês/Ano:</TextBox>
         <InputDate
-          label="Mês/Ano"
           selected={monthYear}
           onChange={(date) => setMonthYear(date)}
           showMonthYearPicker
           dateFormat="MM/yyyy"
         />
+        <TextBox>Total KW gerado:</TextBox>
         <Input
+          width="230px"
           type="number"
-          label="Total KW gerado"
           value={energy}
           onChange={(e) => setEnergy(e.target.value)}
         />
-        <button type="submit">Cadastrar</button>
-      </form>
-    </>
+        <ButtonGlobal type="submit">Cadastrar</ButtonGlobal>
+      </FormGeneration>
+    </ContainerDefault>
   )
 }
 

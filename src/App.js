@@ -3,20 +3,19 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Login from './pages/Login';
 import Unidades from './pages/Unidades';
 import Menu from './components/Menu';
-import Container from './components/Container';
+import GlobalContainer from './components/ContainerGlobal';
 import Register from './pages/Register';
 import Generation from './pages/Generation';
 import Dashboard from './pages/Dashboard';
 
 import "react-datepicker/dist/react-datepicker.css";
 
-
 function App() {
 
   const location = useLocation();
 
   return (
-    <Container>
+    <GlobalContainer>
       {location.pathname !== "/" && <Menu />}
       <Routes>
         <Route path="/" element={<Login />} />
@@ -26,7 +25,7 @@ function App() {
         <Route path="/unidades/edit/:id" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </Container>
+    </GlobalContainer>
   );
 }
 

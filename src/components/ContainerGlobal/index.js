@@ -1,7 +1,7 @@
 import React from "react";
 import { ContainerGlobal } from "./styles";
 
-function Container({children}) {
+function GlobalContainer({children}) {
   return (
     <ContainerGlobal>
       {children}
@@ -9,4 +9,4 @@ function Container({children}) {
   )
 }
 
-export default Container;
+export default GlobalContainer;

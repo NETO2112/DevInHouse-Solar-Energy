@@ -16,18 +16,13 @@ export const DescriptionInput = styled.label`
 export const InputText = styled.input`
   width: 100%;
   height: 24px;
-  border-radius: 2px;
+  border-radius: 4px;
   outline: none;
-  border: 1px solid ${(props) => props.errorMessage ? '#dc3545' : '#ced4da'};
-  padding-left: 5px;
-
+  border: 1px solid #ced4da;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  width: ${props => props.width};
   &:focus {
-    border-color: #EC6D08;
+    border-color: #4CBC9A;
   }
-`;
-
-export const ErrorMessage = styled.div`
-  color: #dc3545;
-  font-size: 11px;
-  margin-top: 2px;
 `;
