@@ -110,8 +110,13 @@ function Dashboard() {
         setEnergyAverage(sum)
         let totalEnergyPerMonth = []
         for (let i = 0; i < 12; i++) {
-          let energyPerMonth = data.filter((a) => a['date'] === pastMonths[i]).map(e => e['energy']).reduce((a, b) => parseInt(a) + parseInt(b))
-          totalEnergyPerMonth = [...totalEnergyPerMonth, energyPerMonth]
+          let hasData = data.filter((a) => a['date'] === pastMonths[i]);
+          if (hasData.length > 0) {
+            let energyPerMonth = data.filter((a) => a['date'] === pastMonths[i]).map(e => e['energy']).reduce((a, b) => parseInt(a) + parseInt(b))
+            totalEnergyPerMonth = [...totalEnergyPerMonth, energyPerMonth]
+          } else {
+            totalEnergyPerMonth = [...totalEnergyPerMonth, 0]
+          }
         }
         setEnergyArray(totalEnergyPerMonth)
       })
